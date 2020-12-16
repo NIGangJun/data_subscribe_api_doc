@@ -586,32 +586,264 @@ result | dict | 返回结果
 
 ### 8. 关区代码
 * **请求URL**
+
+  * /services/cus_params/cus_dist_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&keyword=010
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&keyword=海关总署
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注         |
+    | -------- | -------- | ------------ |
+    | errcode  | string   | 错误代码     |
+    | errmsg   | string   | 错误信息     |
+    | result   | dict     | 返回结果     |
+    | page     | int      | 页码         |
+| total    | int      | 返回数据总数 |
+| data     | list     | 返回数据     |
+    | code     | string   | 关区代码     |
+    | name_cn  | string   | 关区中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":1325,
+            "data":[
+                {
+                    "code":"0100",
+                    "name_cn":"北京关区"
+                },
+                 {
+                    "code":"0101",
+                    "name_cn":"京机场关"
+                },
+                ......
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":1325,
+            "data":[
+                {
+                    "code":"0000",
+                    "name_cn":"海关总署"
+                }
+        	]
+        }
+    }
+    ```
 
 
 ### 9. 国别地区代码
 * **请求URL**
+
+  * /services/cus_params/foreign_region_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&keyword=ABW
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&keyword=阿富汗
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称     | 参数类型 | 备注         |
+    | ------------ | -------- | ------------ |
+    | errcode      | string   | 错误代码     |
+    | errmsg       | string   | 错误信息     |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code         | string   | 国别代码     |
+    | name_cn      | string   | 国别中文名称 |
+    | dec_old_code | string   | 原海关代码   |
+    | ciq_old_code | string   | 原检疫代码   |
+
 * **返回参数示例**
+
+  * 示例1返回参数：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"ABW",
+                	"name_cn":"阿鲁巴",
+                	"dec_old_code":"403",
+                	"ciq_old_code":"533"
+                }
+    	]
+        }
+  }
+    
+    ```
+    
+  * 示例2返回参数：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"AFG",
+                	"name_cn":"阿富汗",
+                	"dec_old_code":"101",
+                	"ciq_old_code":"004"
+            	}
+        	]
+        }
+    }
+    ```
 
 
 ### 10. 国内地区代码
 * **请求URL**
+
+  * /services/cus_params/inland_region_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&keyword=640
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&keyword=石嘴山
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 国内地区代码     |
+    | name_cn  | string   | 国内地区中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+               	{
+                	"code":"64019",
+                	"name_cn":"银川"
+            	},
+                {
+                    "code":"64029",
+                    "name_cn":"石嘴山"
+                },
+                ......
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+               {
+                    "code":"64029",
+                    "name_cn":"石嘴山"
+                },
+                {
+                    "code":"6402W",
+                    "name_cn":"石嘴山保税物流中心（B型）"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 11. 国内口岸代码
@@ -626,12 +858,92 @@ result | dict | 返回结果
 
 ### 12. 货币代码
 * **请求URL**
+
+  * /services/cus_params/currency_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&keyword=AUD
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&keyword=人民币
+  
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称     | 参数类型 | 备注         |
+    | ------------ | -------- | ------------ |
+    | errcode      | string   | 错误代码     |
+    | errmsg       | string   | 错误信息     |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code         | string   | 货币代码     |
+    | symbol       | string   | 货币符号     |
+    | name_cn      | string   | 货币中文名称 |
+    | dec_old_code | string   | 原海关代码   |
+    | ciq_old_code | string   | 原检疫代码   |
+
 * **返回参数示例**
+
+  * 示例1返回参数：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+               {
+                    "code":"AUD",
+                    "symbol":"$",
+                    "name_cn":"澳大利亚元",
+                    "dec_old_code":"601",
+                    "ciq_old_code":"36"
+                }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                 {
+                    "code":"CNY",
+                    "symbol":"¥",
+                  "name_cn":"人民币",
+                    "dec_old_code":"142",
+                  "ciq_old_code":"156"
+                 }
+      	]
+        }
+    }
+    ```
+    
 
 
 ### 13. 货物属性
@@ -656,12 +968,95 @@ result | dict | 返回结果
 
 ### 15. 集装箱规格
 * **请求URL**
+
+  * /services/cus_params/container_spec
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&keyword=11
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&keyword=标准
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称     | 参数类型 | 备注         |
+    | ------------ | -------- | ------------ |
+    | errcode      | string   | 错误代码     |
+    | errmsg       | string   | 错误信息     |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code         | string   | 机关代码     |
+    | name_cn      | string   | 机关中文名称 |
+    | dec_old_code | string   | 原海关代码   |
+    | ciq_old_code | string   | 原检疫代码   |
+
 * **返回参数示例**
+
+  * 示例1返回参数：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                 {
+                   "code":"11",
+                    "name_cn":"普通2*标准箱（L）",
+                    "dec_old_code":"L",
+                    "ciq_old_code":"111"
+                 }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                 {
+                    "code":"11",
+                    "name_cn":"普通2*标准箱（L）",
+                    "dec_old_code":"L",
+                    "ciq_old_code":"111"
+                },
+                {
+                    "code":"12",
+                    "name_cn":"冷藏2*标准箱（L）",
+                    "dec_old_code":"L",
+                    "ciq_old_code":"121"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 16. 计量单位
@@ -686,12 +1081,87 @@ result | dict | 返回结果
 
 ### 18. 检验检疫机关代码
 * **请求URL**
+
+  * /services/cus_params/ciq_org_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&keyword=000000
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&keyword=海关
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注         |
+    | -------- | -------- | ------------ |
+    | errcode  | string   | 错误代码     |
+    | errmsg   | string   | 错误信息     |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 机关代码     |
+    | name_cn  | string   | 机关中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"000000",
+                    "name_cn":"海关总署"
+                }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"110000",
+                    "name_cn":"北京海关本部"
+                },
+                {
+                    "code":"115100",
+                    "name_cn":"首都机场海关本部"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 19. 企业资质类别
@@ -706,12 +1176,87 @@ result | dict | 返回结果
 
 ### 20. 检验检疫申请单证代码
 * **请求URL**
+
+  * /services/cus_params/ciq_app_doc_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&keyword=18
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&keyword=证书
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 申请单证代码     |
+    | name_cn  | string   | 申请单证中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"18",
+                    "name_cn":"植物检疫证书"
+                }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+               {
+                    "code":"11",
+                    "name_cn":"品质证书"
+                },
+                {
+                    "code":"12",
+                    "name_cn":"重量证书"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 21. 世界各国地区代码
@@ -726,42 +1271,327 @@ result | dict | 返回结果
 
 ### 22. 随附单证类型
 * **请求URL**
+
+  * /services/cus_params/doc_att_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&keyword=A
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&keyword=出口许可证
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 危包类别代码     |
+    | name_cn  | string   | 危包类别中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+               {
+                    "code":"A",
+                    "name_cn":"检验检疫"
+                }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+              	{
+                    "code":"3",
+                    "name_cn":"两用物项和技术出口许可证"
+                },
+                {
+                    "code":"5",
+                    "name_cn":"纺织品临时出口许可证"
+                }
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 23. 随附单据类型
 * **请求URL**
+
+  * /services/cus_params/bill_att_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&keyword=010
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&keyword=检疫证书
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 危包类别代码     |
+    | name_cn  | string   | 危包类别中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+              	{
+                    "code":"00000010",
+                    "name_cn":"载货清单（舱单）"
+                },
+                {
+                    "code":"50000010",
+                    "name_cn":"特殊医学用途配方食品注册证书"
+                }
+                ......
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+              	{
+                    "code":"20000012",
+                    "name_cn":"动物检疫证书"
+                },
+                {
+                    "code":"20000013",
+                    "name_cn":"植物检疫证书"
+                }
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 24. 危包类别
 * **请求URL**
+
+  * /services/cus_params/dang_pack_categ
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=3
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=二类
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 危包类别代码     |
+    | name_cn  | string   | 危包类别中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+              	{
+                    "code":"3",
+                    "name_cn":"三类"
+                }
+    	]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+              	{
+                    "code":"2",
+                    "name_cn":"二类"
+                }
+        	]
+        }
+    }
+    ```
 
 
 ### 25. 危包规格
 * **请求URL**
+
+  * /services/cus_params/dang_pack_spec
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=4A
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=再生木木箱
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 危包规格代码     |
+    | name_cn  | string   | 危包规格中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[]
+        }
+}
+    ```
+  
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[]
+        }
+    }
+    ```
 
 
 ### 26. 许可证类别代码
@@ -786,22 +1616,172 @@ result | dict | 返回结果
 
 ### 28. 征免方式
 * **请求URL**
+
+  * /services/cus_params/nat_levy_mode
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&keyword=5
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&keyword=征税
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result   | dict     | 返回结果         |
+    | page     | int      | 页码             |
+    | total    | int      | 返回数据总数     |
+    | data     | list     | 返回数据         |
+    | code     | string   | 征免性质代码     |
+    | name_cn  | string   | 征免性质中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":9,
+            "data":[
+                {
+                    "code":"5",
+                    "name_cn":"征免性质"
+                } 
+            ]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":9,
+            "data":[
+                {
+                    "code":"1",
+                    "name_cn":"照章征税"
+                },
+                {
+                    "code":"2",
+                    "name_cn":"折半征税"
+                },
+                ......
+            ]
+        }
+    }
+    ```
 
 
 ### 29. 征免性质
 * **请求URL**
+
+  * /services/cus_params/nat_levy_exem
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&keyword=101
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&keyword=征税
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result       | dict     | 返回结果     |
+    | page         | int      | 页码         |
+    | total        | int      | 返回数据总数 |
+    | data         | list     | 返回数据     |
+    | code     | string   | 征免性质代码     |
+    | name_cn  | string   | 征免性质中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"101",
+                    "name_cn":"一般征税"
+                } 
+        ]
+        }
+  }
+    ```
+    
+  * 示例2返回参数示例：
+  
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"101",
+                    "name_cn":"一般征税"
+                },
+                {
+                    "code":"118",
+                    "name_cn":"整车征税"
+                },
+                ......
+            ]
+        }
+    }
+    ```
 
 
 ### 30. 中国行政区划
