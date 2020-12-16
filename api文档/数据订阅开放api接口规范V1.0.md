@@ -176,41 +176,183 @@ page | int | 否 | 页码
 
 ### 1. 中国出口申报实例
 * **请求URL**
+  * /services/classify_reference/cn_declare_element_eg
+
+
 * **请求类型**
+  * GET
+
+
 * **请求参数**
+
+| 参数名称 | 参数类型 | 是否必填 | 备注        |
+| -------- | -------- | -------- | ----------- |
+| auth_key | string   | 是       | 用户验证key |
+| hs_code  | string   | 是       | 商品编码    |
+
+
 * **请求示例**
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&hs_code=1111111111
+
+
 * **返回参数类型**
-* **返回参数**
-* **返回参数示例**
+  * JSON
+
+**返回参数**
+
+| 参数名称                                                     | 参数类型 | 备注         |
+| ------------------------------------------------------------ | -------- | ------------ |
+| errcode                                                      | integer  | 错误代码     |
+| errmsg                                                       | string   | 错误信息     |
+| result                                                       | dict     | 返回结果     |
+| &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
+| &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+| &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code      | string   | 商品编码     |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_cn | string   | 商品中文名称 |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example_note | string   | 申报要素     |
 
 
 ### 2. 归类裁定
 * **请求URL**
+
+  * services/classify_reference/classify_ruling
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称      | 参数类型 | 是否必填 | 备注         |
+    | ------------- | -------- | -------- | ------------ |
+    | auth_key      | string   | 是       | 用户验证key  |
+    | related_no    | string   | 否       | 相关编号     |
+    | goods_name_cn | string   | 否       | 商品中文名称 |
+
 * **请求示例**
+
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&related_no=1111111111&goods_name_cn=1111111111
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称                                                     | 参数类型 | 备注         |
+    | ------------------------------------------------------------ | -------- | ------------ |
+    | errcode                                                      | integer  | 错误代码     |
+    | errmsg                                                       | string   | 错误信息     |
+    | result                                                       | dict     | 返回结果     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related_no   | string   | 相关编号     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve_duty_para | string   | 决定税号     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_cn | string   | 商品中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_en | string   | 商品英文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_other | string   | 商品名称其他 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_desc   | string   | 商品描述     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_opinion                                             | string   | 归类意见     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by                                                    | string   | 发布单位     |
+
 * **返回参数示例**
 
 
 ### 3. 归类决定
 * **请求URL**
+
+  * /services/classify_reference/classify_resolve
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称            | 参数类型 | 是否必填 | 备注         |
+    | ------------------- | -------- | -------- | ------------ |
+    | auth_key            | string   | 是       | 用户验证key  |
+    | classify_resolve_no | string   | 否       | 归类决定编号 |
+    | hs_code             | string   | 否       | 商品编码     |
+    | goods_name_cn       | string   | 否       | 商品中文名称 |
+
 * **请求示例**
+
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  | 参数名称                                                     | 参数类型 | 备注         |
+  | ------------------------------------------------------------ | -------- | ------------ |
+  | errcode                                                      | integer  | 错误代码     |
+  | errmsg                                                       | string   | 错误信息     |
+  | result                                                       | dict     | 返回结果     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
+  | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_resolve_no | string   | 归类决定编号 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code      | string   | 商品编码     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_cn | string   | 商品中文名称 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_en | string   | 商品英文名称 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_other | string   | 商品名称其他 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_desc   | string   | 商品描述     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_resolve_desc                                        | string   | 归类决定     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by                                                    | string   | 发布单位     |
+
 * **返回参数示例**
 
 
 ### 4. 归类预裁定
 * **请求URL**
+
+  * services/classify_reference/classify_pre_ruling
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * * | 参数名称      | 参数类型 | 是否必填 | 备注             |
+      | ------------- | -------- | -------- | ---------------- |
+      | auth_key      | string   | 是       | 用户验证key      |
+      | pre_ruling_no | string   | 否       | 预裁定决定书编号 |
+      | hs_code       | string   | 否       | 商品编码         |
+      | goods_name_cn | string   | 否       | 商品中文名称     |
+
 * **请求示例**
+
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&pre_ruling_no=11&hs_code=11&goods_name_cn=11
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称                                                     | 参数类型 | 备注                |
+    | ------------------------------------------------------------ | -------- | ------------------- |
+    | errcode                                                      | integer  | 错误代码            |
+    | errmsg                                                       | string   | 错误信息            |
+    | result                                                       | dict     | 返回结果            |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码                |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数        |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据            |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pre_ruling_no | string   | 预裁定决定书编号    |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_no | string   | 申请表编码          |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code      | string   | 商品编码            |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_en | string   | 商品英文名称        |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_other | string   | 商品名称其他        |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_price_quantity_weight | string   | 商品价格、数量/重量 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_desc   | string   | 商品详细描述        |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_pre_ruling_opinion                                  | string   | 商品归类预裁定意见  |
+
 * **返回参数示例**
 
 
