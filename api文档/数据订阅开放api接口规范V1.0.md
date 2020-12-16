@@ -526,32 +526,257 @@ result | dict | 返回结果
 
 ### 2. 报关单类型
 * **请求URL**
+
+  * /services/cus_params/bill_entry_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=M
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=报关
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注               |
+    | -------- | -------- | ------------------ |
+    | errcode  | string   | 错误代码           |
+    | errmsg   | string   | 错误信息           |
+    | result   | dict     | 返回结果           |
+    | page     | int      | 页码               |
+    | total    | int      | 返回数据总数       |
+    | data     | list     | 返回数据           |
+    | code     | string   | 报关单类型代码     |
+    | name_cn  | string   | 报关单类型中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":5,
+            "data":[
+                {
+                    "code":"M",
+                    "name_cn":"通关无纸化"
+                }
+    		]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":5,
+            "data":[
+                {
+                    "code":"O",
+                    "name_cn":"有纸报关"
+                },
+                {
+                    "code":"D",
+                    "name_cn":"无纸带清单报关"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 3. 报关单单据类型
 * **请求URL**
+
+  * /services/cus_params/bill_entry_doc_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=C
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=自报自缴
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                   |
+    | -------- | -------- | ---------------------- |
+    | errcode  | string   | 错误代码               |
+    | errmsg   | string   | 错误信息               |
+    | result   | dict     | 返回结果               |
+    | page     | int      | 页码                   |
+    | total    | int      | 返回数据总数           |
+    | data     | list     | 返回数据               |
+    | code     | string   | 报关单单据类型代码     |
+    | name_cn  | string   | 报关单单据类型中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":18,
+            "data":[
+                {
+                    "code":"CL",
+                    "name_cn":"汇总征税报关单"
+                },
+                {
+                    "code":"ZC",
+                    "name_cn":"自报自缴，汇总征税报关单"
+                },
+                ......
+    		]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":18,
+            "data":[
+                {
+                    "code":"Z",
+                    "name_cn":"自报自缴"
+                },
+                {
+                    "code":"ZC",
+                    "name_cn":"自报自缴，汇总征税报关单"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 4. 备案清单类型
 * **请求URL**
+
+  * /services/cus_params/filing_doc_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=1
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=后报关
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | page     | int      | 页码                 |
+    | total    | int      | 返回数据总数         |
+    | data     | list     | 返回数据             |
+    | code     | string   | 备案清单类型代码     |
+    | name_cn  | string   | 备案清单类型中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":4,
+            "data":[
+                {
+                    "code":"1",
+                    "name_cn":"一般备案清单"
+                }
+    		]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":4,
+            "data":[
+                {
+                    "code":"2",
+                    "name_cn":"先进区、后报关"
+                }
+        	]
+        }
+    }
+    ```
 
 
 ### 5. 成交方式
@@ -630,7 +855,7 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
             "total":1325,
@@ -654,7 +879,7 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
             "total":1325,
@@ -717,10 +942,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":265,
             "data":[
                 {
                     "code":"ABW",
@@ -739,10 +964,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":265,
             "data":[
                 {
                     "code":"AFG",
@@ -802,10 +1027,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":1048,
             "data":[
                	{
                 	"code":"64019",
@@ -826,10 +1051,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":1048,
             "data":[
                {
                     "code":"64029",
@@ -905,10 +1130,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":22,
             "data":[
                {
                     "code":"AUD",
@@ -927,17 +1152,17 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":22,
             "data":[
                  {
                     "code":"CNY",
                     "symbol":"¥",
-                  "name_cn":"人民币",
+                  	"name_cn":"人民币",
                     "dec_old_code":"142",
-                  "ciq_old_code":"156"
+                  	"ciq_old_code":"156"
                  }
       	]
         }
@@ -948,22 +1173,166 @@ result | dict | 返回结果
 
 ### 13. 货物属性
 * **请求URL**
+
+  * /services/cus_params/goods_attr_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&keyword=12
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&keyword=转基因产品
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result   | dict     | 返回结果         |
+    | page     | int      | 页码             |
+    | total    | int      | 返回数据总数     |
+    | data     | list     | 返回数据         |
+    | code     | string   | 货物属性代码     |
+    | name_cn  | string   | 货物属性中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":20,
+            "data":[
+                {
+                    "code":"12",
+                    "name_cn":"3C目录外"
+                }
+    		]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":4,
+            "data":[
+                {
+                    "code":"16",
+                    "name_cn":"转基因产品"
+                }
+        	]
+        }
+    }
+    ```
 
 
 ### 14. 货物用途
 * **请求URL**
+
+  * /services/cus_params/goods_purpose
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&keyword=12
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&keyword=化妆品
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result   | dict     | 返回结果         |
+    | page     | int      | 页码             |
+    | total    | int      | 返回数据总数     |
+    | data     | list     | 返回数据         |
+    | code     | string   | 货物用途代码     |
+    | name_cn  | string   | 货物用途中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":20,
+            "data":[
+                {
+                    "code":"12",
+                    "name_cn":"食用"
+                }
+    		]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":4,
+            "data":[
+                {
+                    "code":"27",
+                    "name_cn":"化妆品"
+                },
+                {
+                    "code":"28",
+                    "name_cn":"化妆品原料"
+                }
+        	]
+        }
+    }
+    ```
 
 
 ### 15. 集装箱规格
@@ -994,18 +1363,18 @@ result | dict | 返回结果
 
 * **返回参数**
 
-  * | 参数名称     | 参数类型 | 备注         |
-    | ------------ | -------- | ------------ |
-    | errcode      | string   | 错误代码     |
-    | errmsg       | string   | 错误信息     |
-    | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code         | string   | 机关代码     |
-    | name_cn      | string   | 机关中文名称 |
-    | dec_old_code | string   | 原海关代码   |
-    | ciq_old_code | string   | 原检疫代码   |
+  * | 参数名称     | 参数类型 | 备注               |
+    | ------------ | -------- | ------------------ |
+    | errcode      | string   | 错误代码           |
+    | errmsg       | string   | 错误信息           |
+    | result       | dict     | 返回结果           |
+    | page         | int      | 页码               |
+    | total        | int      | 返回数据总数       |
+    | data         | list     | 返回数据           |
+    | code         | string   | 集装箱规格代码     |
+    | name_cn      | string   | 集装箱规格中文名称 |
+    | dec_old_code | string   | 原海关代码         |
+    | ciq_old_code | string   | 原检疫代码         |
 
 * **返回参数示例**
 
@@ -1014,10 +1383,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":9,
             "data":[
                  {
                    "code":"11",
@@ -1035,10 +1404,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":9,
             "data":[
                  {
                     "code":"11",
@@ -1125,10 +1494,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":870,
             "data":[
                 {
                     "code":"000000",
@@ -1144,10 +1513,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":870,
             "data":[
                 {
                     "code":"110000",
@@ -1166,12 +1535,87 @@ result | dict | 返回结果
 
 ### 19. 企业资质类别
 * **请求URL**
+
+  * /services/cus_params/ent_qua_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&keyword=100
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&keyword=进口肉类
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注             |
+    | -------- | -------- | ---------------- |
+    | errcode  | string   | 错误代码         |
+    | errmsg   | string   | 错误信息         |
+    | result   | dict     | 返回结果         |
+    | page     | int      | 页码             |
+    | total    | int      | 返回数据总数     |
+    | data     | list     | 返回数据         |
+    | code     | string   | 企业资质代码     |
+    | name_cn  | string   | 企业资质中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":35,
+            "data":[
+                {
+                    "code":"100",
+                    "name_cn":"通关司类"
+                }
+    	]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":35,
+            "data":[
+                {
+                    "code":"510",
+                    "name_cn":"进口肉类收货人备案"
+                },
+                {
+                    "code":"511",
+                    "name_cn":"进口肉类存储冷库备案"
+                },
+                ......
+        	]
+        }
+    }
+    ```
 
 
 ### 20. 检验检疫申请单证代码
@@ -1220,10 +1664,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":19,
             "data":[
                 {
                     "code":"18",
@@ -1239,10 +1683,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":19,
             "data":[
                {
                     "code":"11",
@@ -1305,8 +1749,8 @@ result | dict | 返回结果
     | page         | int      | 页码         |
     | total        | int      | 返回数据总数 |
     | data         | list     | 返回数据     |
-    | code     | string   | 危包类别代码     |
-    | name_cn  | string   | 危包类别中文名称 |
+    | code     | string   | 随附单证类型代码 |
+    | name_cn  | string   | 随附单证类型中文名称 |
 
 * **返回参数示例**
 
@@ -1315,10 +1759,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":55,
             "data":[
                {
                     "code":"A",
@@ -1334,10 +1778,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":55,
             "data":[
               	{
                     "code":"3",
@@ -1390,8 +1834,8 @@ result | dict | 返回结果
     | page         | int      | 页码         |
     | total        | int      | 返回数据总数 |
     | data         | list     | 返回数据     |
-    | code     | string   | 危包类别代码     |
-    | name_cn  | string   | 危包类别中文名称 |
+    | code     | string   | 随附单据类型代码 |
+    | name_cn  | string   | 随附单据类型中文名称 |
 
 * **返回参数示例**
 
@@ -1400,10 +1844,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":59,
             "data":[
               	{
                     "code":"00000010",
@@ -1424,10 +1868,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":59,
             "data":[
               	{
                     "code":"20000012",
@@ -1490,10 +1934,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":3,
             "data":[
               	{
                     "code":"3",
@@ -1509,10 +1953,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":3,
             "data":[
               	{
                     "code":"2",
@@ -1543,9 +1987,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=4A
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=再生木木箱
-
+  * 示例：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&keyword=4A
+  
 * **返回参数类型**
 
   * JSON
@@ -1565,33 +2008,20 @@ result | dict | 返回结果
 
 * **返回参数示例**
 
-  * 示例1返回参数示例：
+  * 示例返回参数示例：
 
   * ```json
     {
-        "errcode":"0",
-        "errmsg":"",
+        "errcode":"1001",
+        "errmsg":"无数据",
         "result":{
             "page":1,
-            "total":56,
+            "total":0,
             "data":[]
         }
 }
     ```
   
-  * 示例2返回参数示例：
-  
-  * ```json
-    {
-        "errcode":"0",
-        "errmsg":"",
-        "result":{
-            "page":1,
-            "total":56,
-            "data":[]
-        }
-    }
-    ```
 
 
 ### 26. 许可证类别代码
@@ -1650,8 +2080,8 @@ result | dict | 返回结果
     | page     | int      | 页码             |
     | total    | int      | 返回数据总数     |
     | data     | list     | 返回数据         |
-    | code     | string   | 征免性质代码     |
-    | name_cn  | string   | 征免性质中文名称 |
+    | code     | string   | 征免方式代码     |
+    | name_cn  | string   | 征免方式中文名称 |
 
 * **返回参数示例**
 
@@ -1660,10 +2090,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":9,
+            "total":8,
             "data":[
                 {
                     "code":"5",
@@ -1679,10 +2109,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":9,
+            "total":8,
             "data":[
                 {
                     "code":"1",
@@ -1745,10 +2175,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":78,
             "data":[
                 {
                     "code":"101",
@@ -1764,10 +2194,10 @@ result | dict | 返回结果
   * ```json
     {
         "errcode":"0",
-        "errmsg":"",
+        "errmsg":"请求成功",
         "result":{
             "page":1,
-            "total":56,
+            "total":78,
             "data":[
                 {
                     "code":"101",
@@ -1786,12 +2216,85 @@ result | dict | 返回结果
 
 ### 30. 中国行政区划
 * **请求URL**
+
+  * /services/cus_params/cn_admin_area
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
 * **请求示例**
+
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&keyword=654026
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&keyword=中国
+
 * **返回参数类型**
+
+  * JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | page     | int      | 页码                 |
+    | total    | int      | 返回数据总数         |
+    | data     | list     | 返回数据             |
+    | code     | string   | 国内行政区划代码     |
+    | name_cn  | string   | 国内行政区划中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":3433,
+            "data":[
+                {
+                    "code":"654026",
+                    "name_cn":"伊犁哈萨克自治州昭苏县"
+                } 
+        	]
+        }
+    }
+    ```
+
+  * 示例2返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"请求成功",
+        "result":{
+            "page":1,
+            "total":3433,
+            "data":[
+                {
+                    "code":"910000",
+                    "name_cn":"中国"
+                }
+            ]
+        }
+    }
+    ```
+
+
+### 
 
 
 ## 四、贸易管制商品目录
