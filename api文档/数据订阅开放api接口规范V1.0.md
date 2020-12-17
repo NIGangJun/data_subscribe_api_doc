@@ -673,12 +673,48 @@ result | dict | 返回结果
 
 
 ### 1. 包装种类
+
 * **请求URL**
+    * /services/cus_params/wrap_type
+
+
 * **请求类型**
+    * GET
+
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注        |
+    | -------- | -------- | -------- | ----------- |
+    | auth_key | string   | 是       | 用户验证key |
+    | keyword  | string   | 否       | 请求关键字  |
+    | page     | int      | 否       | 页码        |
+
+
 * **请求示例**
+    * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=123456789&keyword=M
+    
+
 * **返回参数类型**
+    * JSON
+
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注               |
+    | -------- | -------- | ------------------ |
+    | errcode  | string   | 错误代码           |
+    | errmsg   | string   | 错误信息           |
+    | result   | dict     | 返回结果           |
+    | page     | int      | 页码               |
+    | total    | int      | 返回数据总数       |
+    | data     | list     | 返回数据           |
+    | code     | string   | 包装种类代码     |
+    | name_cn  | string   | 包装种类中文名称 |
+    | dec_old_code  | string   | 原海关代码 |
+    | ciq_old_code  | string   | 原检疫代码 |
+
+
 * **返回参数示例**
 
 
