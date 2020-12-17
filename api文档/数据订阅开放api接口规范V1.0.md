@@ -781,34 +781,174 @@ result | dict | 返回结果
 
 ### 5. 成交方式
 * **请求URL**
+
+  * /services/cus_params/trade_terms
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 成交方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 成交方式中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 
 
 ### 6. 港口代码
 * **请求URL**
+
+  * /services/cus_params/port_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 港口代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 港口中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"101",
+                    "name_cn":"",
+                    "dec_old_code":"",
+                    "ciq_old_code":""
+                },.......
+        ]
+        }
+    }
 
 
 ### 7. 关联理由代码
 * **请求URL**
+
+  * /services/cus_params/relation_reason_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 关联理由代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 关联理由中文名称 |
+
 * **返回参数示例**
 
+  * 示例1返回参数示例：
 
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"101",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 ### 8. 关区代码
 * **请求URL**
 
@@ -1073,13 +1213,58 @@ result | dict | 返回结果
 
 ### 11. 国内口岸代码
 * **请求URL**
+
+  * /services/cus_params/domestic_ports_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 国内口岸代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 国内口岸中文名称 |
+
 * **返回参数示例**
 
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 
 ### 12. 货币代码
 * **请求URL**
@@ -1430,22 +1615,117 @@ result | dict | 返回结果
 
 ### 16. 计量单位
 * **请求URL**
+
+  * /services/cus_params/unit
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 计量单位代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 计量单位中文名称 |
+
 * **返回参数示例**
 
+  * 示例1返回参数示例：
 
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 ### 17. 监管方式
 * **请求URL**
+
+  * /services/cus_params/trade_mode
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 监管方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 监管方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":"",
+                    "dec_old_code":"",
+                    "ciq_old_code":""
+                },.......
+        ]
+        }
+    }
+
 
 
 ### 18. 检验检疫机关代码
@@ -1705,12 +1985,58 @@ result | dict | 返回结果
 
 ### 21. 世界各国地区代码
 * **请求URL**
+
+  * /services/cus_params/country_code
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 世界各国地区代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 世界各国地区中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 
 
 ### 22. 随附单证类型
@@ -2026,22 +2352,118 @@ result | dict | 返回结果
 
 ### 26. 许可证类别代码
 * **请求URL**
+
+  * /services/cus_params/license_type
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 许可证类型代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 许可证类型中文名称 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":""
+                },.......
+        ]
+        }
+    }
 
 
 ### 27. 运输方式
 * **请求URL**
+
+  * /services/cus_params/transport_mode
+
 * **请求类型**
+
+  * GET
+
 * **请求参数**
+
+  * | 参数名称 | 参数类型 | 是否必填 | 备注                |
+    | -------- | -------- | -------- | ------------------- |
+    | auth_key | string   | 是       | 用户验证key         |
+    | keyword  | string   | 否       | 请求关键字          |
+    | page     | int      | 否       | 页码(默认返回第1页) |
+
 * **请求示例**
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=123456789&keyword=101&page=1
 * **返回参数类型**
+  - JSON
+
 * **返回参数**
+
+  * | 参数名称 | 参数类型 | 备注                 |
+    | -------- | -------- | -------------------- |
+    | errcode  | string   | 错误代码             |
+    | errmsg   | string   | 错误信息             |
+    | result   | dict     | 返回结果             |
+    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
+    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
+    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 运输方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 运输方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+
 * **返回参数示例**
+
+  * 示例1返回参数示例：
+
+  * ```json
+    {
+        "errcode":"0",
+        "errmsg":"",
+        "result":{
+            "page":1,
+            "total":56,
+            "data":[
+                {
+                    "code":"",
+                    "name_cn":"",
+                    "dec_old_code":"",
+                    "ciq_old_code":""
+                },.......
+        ]
+        }
+    }
 
 
 ### 28. 征免方式
