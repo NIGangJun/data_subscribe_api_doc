@@ -9,7 +9,7 @@
 1004 | string | 访问频率过快 | 
 1005 | string | 缺少必要参数 | 
 1006 | string | 此URL不存在 |
-1007 | string | 被禁止的IP | 暂不使用
+1007 | string |  | 暂不使用
 1008 | string | 接口维护 | 暂不使用
 1009 | string | 接口停用 | 暂不使用
 
@@ -502,6 +502,7 @@ result | dict | 返回结果
 | -------- | -------- | -------- | ----------- |
 | auth_key | string   | 是       | 用户验证key |
 | hs_code  | string   | 是       | 商品编码    |
+| page | int | 否 | 页码，默认为1 |
 
 
 * **请求示例**
@@ -542,6 +543,7 @@ result | dict | 返回结果
     | auth_key      | string   | 是       | 用户验证key  |
     | related_no    | string   | 否       | 相关编号     |
     | goods_name_cn | string   | 否       | 商品中文名称 |
+    | page | int | 否 | 页码，默认为1 |
 
 * **请求示例**
 
@@ -590,6 +592,7 @@ result | dict | 返回结果
     | classify_resolve_no | string   | 否       | 归类决定编号 |
     | hs_code             | string   | 否       | 商品编码     |
     | goods_name_cn       | string   | 否       | 商品中文名称 |
+    | page | int | 否 | 页码，默认为1 |
 
 * **请求示例**
 
@@ -638,6 +641,7 @@ result | dict | 返回结果
       | pre_ruling_no | string   | 否       | 预裁定决定书编号 |
       | hs_code       | string   | 否       | 商品编码         |
       | goods_name_cn | string   | 否       | 商品中文名称     |
+      | page | int | 否 | 页码，默认为1 |
 
 * **请求示例**
 
