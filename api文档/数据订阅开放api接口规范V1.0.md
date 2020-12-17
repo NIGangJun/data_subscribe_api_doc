@@ -277,42 +277,200 @@ result | dict | 返回结果
 
 
 ### 6. 进口双反税率
+
 * **请求URL**
+    * /services/cn_inout_tariff/im_anti_rate
+
 * **请求类型**
+    * GET
+
+
 * **请求参数**
+
+参数名称 | 参数类型 | 是否必填 | 备注
+---|---|---|---
+auth_key | string | 是 | 用户验证key
+hs_code| string | 是 | 商品编码
+page | int | 否 | 页码，默认为1
+
+
 * **请求示例**
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_anti_rate?auth_key=1111111111&hs_code=1111111111&page=1
+
+
 * **返回参数类型**
+    * JSON
+
+
 * **返回参数**
+
+参数名称 | 参数类型 | 备注
+---|---|---
+errcode | string | 错误代码
+errmsg | string | 错误信息
+result | dict | 返回结果
+&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
+&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;origin_country_code | string | 原产国代码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;origin_country_name | string | 原产国名称
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manufacturer_name_cn | string | 原产厂商中文名称
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;manufacturer_name_en | string | 原产厂商英文名称
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_name | string | 税种名称
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_code | string | 税种编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_type_code | string | 税率类别
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate_desc | string | 税率描述
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate_value | string | 税率值
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specific_currency_code | string | 从量税币制
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specific_unit_code | string | 从量税单位
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start_date | string | 开始日期
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end_date | string | 结束日期
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;formula | string | 计算公式
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remark | string | 备注
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;government_notice | string | 相关署令/公告
+
+
 * **返回参数示例**
 
 
 ### 7. 废电基金征收标准
+
 * **请求URL**
+    * /services/cn_inout_tariff/im_waste_electronic_rate
+
+
 * **请求类型**
+    * GET
+
+
 * **请求参数**
+
+参数名称 | 参数类型 | 是否必填 | 备注
+---|---|---|---
+auth_key | string | 是 | 用户验证key
+hs_code| string | 是 | 商品编码
+page | int | 否 | 页码，默认为1
+
+
 * **请求示例**
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_waste_electronic_rate?auth_key=1111111111&hs_code=1111111111&page=1
+
+
 * **返回参数类型**
+    * JSON
+
+
 * **返回参数**
+
+参数名称 | 参数类型 | 备注
+---|---|---
+errcode | string | 错误代码
+errmsg | string | 错误信息
+result | dict | 返回结果
+&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
+&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_name | string | 税种名称
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_code | string | 税种编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_type_code | string | 税率类别
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate_desc | string | 税率描述
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rate_value | string | 税率值
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specific_currency_code | string | 从量税币制
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;specific_unit_code | string | 从量税单位
+
+
 * **返回参数示例**
 
 
 ### 8. 申报要素
+
 * **请求URL**
+    * /services/cn_inout_tariff/goods_declare_element
+
+
 * **请求类型**
+    * GET
+
+
 * **请求参数**
+
+参数名称 | 参数类型 | 是否必填 | 备注
+---|---|---|---
+auth_key | string | 是 | 用户验证key
+hs_code| string | 是 | 商品编码
+page | int | 否 | 页码，默认为1
+
+
 * **请求示例**
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/goods_declare_element?auth_key=1111111111&hs_code=1111111111&page=1
+
+
 * **返回参数类型**
+    * JSON
+
+
 * **返回参数**
+
+参数名称 | 参数类型 | 备注
+---|---|---
+errcode | string | 错误代码
+errmsg | string | 错误信息
+result | dict | 返回结果
+&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
+&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element_no | string | 序号
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element_name | string | 要素名称
+
+
 * **返回参数示例**
 
 
 ### 9. 检验检疫代码
+
 * **请求URL**
+    * /services/cn_inout_tariff/ciq_code
+
+
 * **请求类型**
+    * GET
+
+
 * **请求参数**
+
+参数名称 | 参数类型 | 是否必填 | 备注
+---|---|---|---
+auth_key | string | 是 | 用户验证key
+hs_code| string | 是 | 商品编码
+page | int | 否 | 页码，默认为1
+
+
 * **请求示例**
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/ciq_code?auth_key=1111111111&hs_code=1111111111&page=1
+
+
 * **返回参数类型**
+    * JSON
+
+
 * **返回参数**
+
+参数名称 | 参数类型 | 备注
+---|---|---
+errcode | string | 错误代码
+errmsg | string | 错误信息
+result | dict | 返回结果
+&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
+&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_code | string | 序号
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_name | string | 要素名称
+
+
 * **返回参数示例**
 
 
