@@ -504,12 +504,13 @@ result | dict | 返回结果
 | 参数名称 | 参数类型 | 是否必填 | 备注        |
 | -------- | -------- | -------- | ----------- |
 | auth_key | string   | 是       | 用户验证key |
+| app_id | string   | 是       | 应用ID |
 | hs_code  | string   | 是       | 商品编码    |
 | page | int | 否 | 页码，默认为1 |
 
 
 * **请求示例**
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&hs_code=1111111111
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=1111&hs_code=11111
 
 
 * **返回参数类型**
@@ -544,13 +545,14 @@ result | dict | 返回结果
   * | 参数名称      | 参数类型 | 是否必填 | 备注         |
     | ------------- | -------- | -------- | ------------ |
     | auth_key      | string   | 是       | 用户验证key  |
+    | app_id | string   | 是       | 应用ID |
     | related_no    | string   | 否       | 相关编号     |
     | goods_name_cn | string   | 否       | 商品中文名称 |
     | page | int | 否 | 页码，默认为1 |
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&related_no=1111111111&goods_name_cn=1111111111
+  * http://open_api.aeotrade.com/services/classify_reference/classify_ruling?auth_key=1111111111&app_id=1111&related_no=1111111111&goods_name_cn=1111111111
 
 * **返回参数类型**
 
@@ -592,6 +594,7 @@ result | dict | 返回结果
   * | 参数名称            | 参数类型 | 是否必填 | 备注         |
     | ------------------- | -------- | -------- | ------------ |
     | auth_key            | string   | 是       | 用户验证key  |
+    | app_id | string   | 是       | 应用ID |
     | classify_resolve_no | string   | 否       | 归类决定编号 |
     | hs_code             | string   | 否       | 商品编码     |
     | goods_name_cn       | string   | 否       | 商品中文名称 |
@@ -599,7 +602,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111
+  * http://open_api.aeotrade.com/services/classify_reference/classify_resolve?auth_key=1111111111&app_id=1111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111
 
 * **返回参数类型**
 
@@ -641,6 +644,7 @@ result | dict | 返回结果
   * * | 参数名称      | 参数类型 | 是否必填 | 备注             |
       | ------------- | -------- | -------- | ---------------- |
       | auth_key      | string   | 是       | 用户验证key      |
+      | app_id | string   | 是       | 应用ID |
       | pre_ruling_no | string   | 否       | 预裁定决定书编号 |
       | hs_code       | string   | 否       | 商品编码         |
       | goods_name_cn | string   | 否       | 商品中文名称     |
@@ -648,7 +652,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111111111&pre_ruling_no=11&hs_code=11&goods_name_cn=11
+  * http://open_api.aeotrade.com/services/classify_reference/classify_pre_ruling?auth_key=1111111111&app_id=1111&pre_ruling_no=11&hs_code=11&goods_name_cn=11
 
 * **返回参数类型**
 
