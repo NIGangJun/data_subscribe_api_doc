@@ -36,6 +36,7 @@
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -92,6 +93,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -142,6 +144,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -191,6 +194,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -242,6 +246,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -293,6 +298,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -352,6 +358,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -402,6 +409,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -447,6 +455,7 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
+| app_id | string   | 是       | 应用ID |
 hs_code| string | 是 | 商品编码
 page | int | 否 | 页码，默认为1
 
@@ -699,6 +708,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -744,6 +754,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -829,6 +840,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -919,6 +931,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -999,6 +1012,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1055,6 +1069,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1115,6 +1130,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1169,6 +1185,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1254,6 +1271,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1341,6 +1359,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1431,6 +1450,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1486,6 +1506,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1576,6 +1597,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1656,6 +1678,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1740,6 +1763,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -1833,6 +1857,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1887,6 +1912,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -1948,6 +1974,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2033,6 +2060,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2118,6 +2146,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2203,6 +2232,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -2259,6 +2289,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2344,6 +2375,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2434,6 +2466,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2514,6 +2547,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2570,6 +2604,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -2626,6 +2661,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注                |
     | -------- | -------- | -------- | ------------------- |
     | auth_key | string   | 是       | 用户验证key         |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
     | page     | int      | 否       | 页码(默认返回第1页) |
 
@@ -2686,6 +2722,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2771,6 +2808,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
@@ -2856,6 +2894,7 @@ result | dict | 返回结果
   * | 参数名称 | 参数类型 | 是否必填 | 备注        |
     | -------- | -------- | -------- | ----------- |
     | auth_key | string   | 是       | 用户验证key |
+    | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
     | page     | int      | 否       | 页码        |
 
