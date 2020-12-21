@@ -529,7 +529,7 @@ result | dict | 返回结果
 
 | 参数名称                                                     | 参数类型 | 备注         |
 | ------------------------------------------------------------ | -------- | ------------ |
-| errcode                                                      | integer  | 错误代码     |
+| errcode                                                      | string   | 错误代码     |
 | errmsg                                                       | string   | 错误信息     |
 | result                                                       | dict     | 返回结果     |
 | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
@@ -571,7 +571,7 @@ result | dict | 返回结果
 
   * | 参数名称                                                     | 参数类型 | 备注         |
     | ------------------------------------------------------------ | -------- | ------------ |
-    | errcode                                                      | integer  | 错误代码     |
+    | errcode                                                      | string   | 错误代码     |
     | errmsg                                                       | string   | 错误信息     |
     | result                                                       | dict     | 返回结果     |
     | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
@@ -583,8 +583,8 @@ result | dict | 返回结果
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_en | string   | 商品英文名称 |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_other | string   | 商品名称其他 |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_desc   | string   | 商品描述     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_opinion                                             | string   | 归类意见     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by                                                    | string   | 发布单位     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_opinion | string   | 归类意见     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by    | string   | 发布单位     |
 
 * **返回参数示例**
 
@@ -621,7 +621,7 @@ result | dict | 返回结果
 
   | 参数名称                                                     | 参数类型 | 备注         |
   | ------------------------------------------------------------ | -------- | ------------ |
-  | errcode                                                      | integer  | 错误代码     |
+  | errcode                                                      | string   | 错误代码     |
   | errmsg                                                       | string   | 错误信息     |
   | result                                                       | dict     | 返回结果     |
   | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
@@ -633,8 +633,8 @@ result | dict | 返回结果
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_en | string   | 商品英文名称 |
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_other | string   | 商品名称其他 |
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_desc   | string   | 商品描述     |
-  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_resolve_desc                                        | string   | 归类决定     |
-  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by                                                    | string   | 发布单位     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_resolve_desc | string   | 归类决定     |
+  | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;issued_by    | string   | 发布单位     |
 
 * **返回参数示例**
 
@@ -671,7 +671,7 @@ result | dict | 返回结果
 
   * | 参数名称                                                     | 参数类型 | 备注                |
     | ------------------------------------------------------------ | -------- | ------------------- |
-    | errcode                                                      | integer  | 错误代码            |
+    | errcode                                                      | string | 错误代码            |
     | errmsg                                                       | string   | 错误信息            |
     | result                                                       | dict     | 返回结果            |
     | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码                |
@@ -716,7 +716,6 @@ result | dict | 返回结果
 * **请求示例**
     * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=123456789&keyword=M
     
-
 * **返回参数类型**
     * JSON
 
@@ -1017,10 +1016,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1053,6 +1054,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 ### 6. 港口代码
@@ -1074,10 +1076,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1114,6 +1118,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 ### 7. 关联理由代码
@@ -1135,10 +1140,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1171,6 +1178,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 ### 8. 关区代码
 * **请求URL**
 
@@ -1455,10 +1463,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1491,6 +1501,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 ### 12. 货币代码
 * **请求URL**
@@ -1862,10 +1873,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1898,6 +1911,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 ### 17. 监管方式
 * **请求URL**
 
@@ -1917,10 +1931,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -1957,6 +1973,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 
@@ -2237,10 +2254,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -2273,6 +2292,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 ### 22. 随附单证类型
@@ -2609,10 +2629,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -2645,6 +2667,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 ### 27. 运输方式
@@ -2666,10 +2689,12 @@ result | dict | 返回结果
     | page     | int      | 否       | 页码(默认返回第1页) |
 
 * **请求示例**
+  
   * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=123456789&app_id=11111&keyword=101&page=1
 * **返回参数类型**
-  - JSON
-
+  
+- JSON
+  
 * **返回参数**
 
   * | 参数名称 | 参数类型 | 备注                 |
@@ -2706,6 +2731,7 @@ result | dict | 返回结果
         ]
         }
     }
+    ```
 
 
 ### 28. 征免方式
