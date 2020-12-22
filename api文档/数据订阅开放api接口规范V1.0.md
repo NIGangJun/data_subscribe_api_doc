@@ -519,7 +519,7 @@ result | dict | 返回结果
 
 
 * **请求示例**
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=11111&app_id=1111&hs_code=11111
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=1111&hs_code=11111
 
 
 * **返回参数类型**
