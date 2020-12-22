@@ -533,11 +533,12 @@ result | dict | 返回结果
 | auth_key | string   | 是       | 用户验证key |
 | app_id | string   | 是       | 应用ID |
 | hs_code  | string   | 是       | 商品编码    |
-| page | int | 否 | 页码，默认为1 |
+| page_current | int | 否 | 页码，默认为1 |
+| page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 
 * **请求示例**
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=1111&hs_code=11111
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=1111&hs_code=11111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -550,8 +551,9 @@ result | dict | 返回结果
 | errcode                                                      | string   | 错误代码     |
 | errmsg                                                       | string   | 错误信息     |
 | result                                                       | dict     | 返回结果     |
-| &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
-| &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+| &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+| &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+| &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
 | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code      | string   | 商品编码     |
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_cn | string   | 商品中文名称 |
@@ -575,11 +577,12 @@ result | dict | 返回结果
     | app_id | string   | 是       | 应用ID |
     | related_no    | string   | 否       | 相关编号     |
     | goods_name_cn | string   | 否       | 商品中文名称 |
-    | page | int | 否 | 页码，默认为1 |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_ruling?auth_key=1111111111&app_id=1111&related_no=1111111111&goods_name_cn=1111111111
+  * http://open_api.aeotrade.com/services/classify_reference/classify_ruling?auth_key=1111111111&app_id=1111&related_no=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -592,8 +595,9 @@ result | dict | 返回结果
     | errcode                                                      | string   | 错误代码     |
     | errmsg                                                       | string   | 错误信息     |
     | result                                                       | dict     | 返回结果     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
-    | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
     | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;related_no   | string   | 相关编号     |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;resolve_duty_para | string   | 决定税号     |
@@ -625,11 +629,12 @@ result | dict | 返回结果
     | classify_resolve_no | string   | 否       | 归类决定编号 |
     | hs_code             | string   | 否       | 商品编码     |
     | goods_name_cn       | string   | 否       | 商品中文名称 |
-    | page | int | 否 | 页码，默认为1 |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_resolve?auth_key=1111111111&app_id=1111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111
+  * http://open_api.aeotrade.com/services/classify_reference/classify_resolve?auth_key=1111111111&app_id=1111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -642,8 +647,9 @@ result | dict | 返回结果
   | errcode                                                      | string   | 错误代码     |
   | errmsg                                                       | string   | 错误信息     |
   | result                                                       | dict     | 返回结果     |
-  | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码         |
-  | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+  | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
   | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据     |
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;classify_resolve_no | string   | 归类决定编号 |
   | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code      | string   | 商品编码     |
@@ -668,18 +674,19 @@ result | dict | 返回结果
 
 * **请求参数**
 
-  * * | 参数名称      | 参数类型 | 是否必填 | 备注             |
+  *   | 参数名称      | 参数类型 | 是否必填 | 备注             |
       | ------------- | -------- | -------- | ---------------- |
       | auth_key      | string   | 是       | 用户验证key      |
       | app_id | string   | 是       | 应用ID |
       | pre_ruling_no | string   | 否       | 预裁定决定书编号 |
       | hs_code       | string   | 否       | 商品编码         |
       | goods_name_cn | string   | 否       | 商品中文名称     |
-      | page | int | 否 | 页码，默认为1 |
+      | page_current | int | 否 | 页码，默认为1 |
+      | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_pre_ruling?auth_key=1111111111&app_id=1111&pre_ruling_no=11&hs_code=11&goods_name_cn=11
+  * http://open_api.aeotrade.com/services/classify_reference/classify_pre_ruling?auth_key=1111111111&app_id=1111&pre_ruling_no=11&hs_code=11&goods_name_cn=11&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -692,8 +699,9 @@ result | dict | 返回结果
     | errcode                                                      | string | 错误代码            |
     | errmsg                                                       | string   | 错误信息            |
     | result                                                       | dict     | 返回结果            |
-    | &nbsp;&nbsp;&nbsp;&nbsp;page                                 | int      | 页码                |
-    | &nbsp;&nbsp;&nbsp;&nbsp;total                                | int      | 返回数据总数        |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
     | &nbsp;&nbsp;&nbsp;&nbsp;data                                 | list     | 返回数据            |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pre_ruling_no | string   | 预裁定决定书编号    |
     | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;application_no | string   | 申请表编码          |
@@ -728,11 +736,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=123456789&keyword=M
+    * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=123456789&keyword=M&page_current=1&page_size=20
     
 * **返回参数类型**
     * JSON
@@ -745,13 +754,14 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码           |
     | errmsg   | string   | 错误信息           |
     | result   | dict     | 返回结果           |
-    | page     | int      | 页码               |
-    | total    | int      | 返回数据总数       |
-    | data     | list     | 返回数据           |
-    | code     | string   | 包装种类代码     |
-    | name_cn  | string   | 包装种类中文名称 |
-    | dec_old_code  | string   | 原海关代码 |
-    | ciq_old_code  | string   | 原检疫代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据           |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 包装种类代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 包装种类中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
 
 
 * **返回参数示例**
@@ -773,12 +783,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=M&app_id=11111
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=报关&app_id=11111
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=M&app_id=11111&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=报关&app_id=11111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -791,11 +802,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码           |
     | errmsg   | string   | 错误信息           |
     | result   | dict     | 返回结果           |
-    | page     | int      | 页码               |
-    | total    | int      | 返回数据总数       |
-    | data     | list     | 返回数据           |
-    | code     | string   | 报关单类型代码     |
-    | name_cn  | string   | 报关单类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据           |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 报关单类型代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 报关单类型中文名称 |
 
 * **返回参数示例**
 
@@ -859,12 +871,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=C&app_id=11111
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=自报自缴&app_id=11111
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=C&app_id=11111&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=自报自缴&app_id=11111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -877,11 +890,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码               |
     | errmsg   | string   | 错误信息               |
     | result   | dict     | 返回结果               |
-    | page     | int      | 页码                   |
-    | total    | int      | 返回数据总数           |
-    | data     | list     | 返回数据               |
-    | code     | string   | 报关单单据类型代码     |
-    | name_cn  | string   | 报关单单据类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据               |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 报关单单据类型代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 报关单单据类型中文名称 |
 
 * **返回参数示例**
 
@@ -950,12 +964,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=1&app_id=11111
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=后报关&app_id=11111
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=1&app_id=11111&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=后报关&app_id=11111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -968,11 +983,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | page     | int      | 页码                 |
-    | total    | int      | 返回数据总数         |
-    | data     | list     | 返回数据             |
-    | code     | string   | 备案清单类型代码     |
-    | name_cn  | string   | 备案清单类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 备案清单类型代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 备案清单类型中文名称 |
 
 * **返回参数示例**
 
@@ -1031,11 +1047,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1047,11 +1064,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 成交方式代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 成交方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 成交方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 成交方式中文名称 |
 
 * **返回参数示例**
 
@@ -1091,11 +1109,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1107,13 +1126,14 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 港口代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 港口中文名称 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 港口代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 港口中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
 
 * **返回参数示例**
 
@@ -1155,11 +1175,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1171,11 +1192,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 关联理由代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 关联理由中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 关联理由代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 关联理由中文名称 |
 
 * **返回参数示例**
 
@@ -1213,12 +1235,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=010
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=海关总署
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=010&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=海关总署&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1231,11 +1254,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码     |
     | errmsg   | string   | 错误信息     |
     | result   | dict     | 返回结果     |
-    | page     | int      | 页码         |
-| total    | int      | 返回数据总数 |
-| data     | list     | 返回数据     |
-    | code     | string   | 关区代码     |
-    | name_cn  | string   | 关区中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 关区代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 关区中文名称 |
 
 * **返回参数示例**
 
@@ -1299,12 +1323,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=ABW
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=阿富汗
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=ABW&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=阿富汗&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1317,13 +1342,14 @@ result | dict | 返回结果
     | errcode      | string   | 错误代码     |
     | errmsg       | string   | 错误信息     |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code         | string   | 国别代码     |
-    | name_cn      | string   | 国别中文名称 |
-    | dec_old_code | string   | 原海关代码   |
-    | ciq_old_code | string   | 原检疫代码   |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code         | string   | 国别代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn      | string   | 国别中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code | string   | 原海关代码   |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code | string   | 原检疫代码   |
 
 * **返回参数示例**
 
@@ -1387,12 +1413,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=640
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=石嘴山
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=640&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=石嘴山&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1405,11 +1432,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 国内地区代码     |
-    | name_cn  | string   | 国内地区中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 国内地区代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 国内地区中文名称 |
 
 * **返回参数示例**
 
@@ -1478,11 +1506,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1494,11 +1523,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 国内口岸代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 国内口岸中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 国内口岸代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 国内口岸中文名称 |
 
 * **返回参数示例**
 
@@ -1537,12 +1567,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=AUD
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=人民币
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=AUD&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=人民币&page_current=1&page_size=20
   
 * **返回参数类型**
 
@@ -1555,14 +1586,15 @@ result | dict | 返回结果
     | errcode      | string   | 错误代码     |
     | errmsg       | string   | 错误信息     |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code         | string   | 货币代码     |
-    | symbol       | string   | 货币符号     |
-    | name_cn      | string   | 货币中文名称 |
-    | dec_old_code | string   | 原海关代码   |
-    | ciq_old_code | string   | 原检疫代码   |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code         | string   | 货币代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;symbol       | string   | 货币符号     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn      | string   | 货币中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code | string   | 原海关代码   |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code | string   | 原检疫代码   |
 
 * **返回参数示例**
 
@@ -1628,12 +1660,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=12
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=转基因产品
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=12&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=转基因产品&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1646,11 +1679,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result   | dict     | 返回结果         |
-    | page     | int      | 页码             |
-    | total    | int      | 返回数据总数     |
-    | data     | list     | 返回数据         |
-    | code     | string   | 货物属性代码     |
-    | name_cn  | string   | 货物属性中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 货物属性代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 货物属性中文名称 |
 
 * **返回参数示例**
 
@@ -1709,12 +1743,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=12
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=化妆品
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=12&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=化妆品&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1727,11 +1762,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result   | dict     | 返回结果         |
-    | page     | int      | 页码             |
-    | total    | int      | 返回数据总数     |
-    | data     | list     | 返回数据         |
-    | code     | string   | 货物用途代码     |
-    | name_cn  | string   | 货物用途中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 货物用途代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 货物用途中文名称 |
 
 * **返回参数示例**
 
@@ -1794,12 +1830,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=11
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=标准
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=11&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=标准&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1812,13 +1849,14 @@ result | dict | 返回结果
     | errcode      | string   | 错误代码           |
     | errmsg       | string   | 错误信息           |
     | result       | dict     | 返回结果           |
-    | page         | int      | 页码               |
-    | total        | int      | 返回数据总数       |
-    | data         | list     | 返回数据           |
-    | code         | string   | 集装箱规格代码     |
-    | name_cn      | string   | 集装箱规格中文名称 |
-    | dec_old_code | string   | 原海关代码         |
-    | ciq_old_code | string   | 原检疫代码         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据           |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code         | string   | 集装箱规格代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn      | string   | 集装箱规格中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code | string   | 原海关代码         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code | string   | 原检疫代码         |
 
 * **返回参数示例**
 
@@ -1888,11 +1926,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1904,11 +1943,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 计量单位代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 计量单位中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 计量单位代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 计量单位中文名称 |
 
 * **返回参数示例**
 
@@ -1946,11 +1986,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1962,13 +2003,14 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 监管方式代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 监管方式中文名称 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 监管方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 监管方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
 
 * **返回参数示例**
 
@@ -2011,12 +2053,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=000000
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=海关
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=000000&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=海关&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2029,11 +2072,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码     |
     | errmsg   | string   | 错误信息     |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 机关代码     |
-    | name_cn  | string   | 机关中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 机关代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 机关中文名称 |
 
 * **返回参数示例**
 
@@ -2097,12 +2141,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=100
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=进口肉类
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=100&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=进口肉类&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2115,11 +2160,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result   | dict     | 返回结果         |
-    | page     | int      | 页码             |
-    | total    | int      | 返回数据总数     |
-    | data     | list     | 返回数据         |
-    | code     | string   | 企业资质代码     |
-    | name_cn  | string   | 企业资质中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 企业资质代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 企业资质中文名称 |
 
 * **返回参数示例**
 
@@ -2183,12 +2229,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=18
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=证书
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=18&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=证书&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2201,11 +2248,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 申请单证代码     |
-    | name_cn  | string   | 申请单证中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 申请单证代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 申请单证中文名称 |
 
 * **返回参数示例**
 
@@ -2269,11 +2317,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2285,11 +2334,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 世界各国地区代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 世界各国地区中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 世界各国地区代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 世界各国地区中文名称 |
 
 * **返回参数示例**
 
@@ -2329,12 +2379,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=A
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=出口许可证
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=A&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=出口许可证&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2347,11 +2398,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 随附单证类型代码 |
-    | name_cn  | string   | 随附单证类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 随附单证类型代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 随附单证类型中文名称 |
 
 * **返回参数示例**
 
@@ -2415,12 +2467,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=010
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=检疫证书
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=010&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=检疫证书&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2433,11 +2486,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 随附单据类型代码 |
-    | name_cn  | string   | 随附单据类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 随附单据类型代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 随附单据类型中文名称 |
 
 * **返回参数示例**
 
@@ -2506,12 +2560,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=3
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=二类
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=3&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=二类&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2524,11 +2579,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 危包类别代码     |
-    | name_cn  | string   | 危包类别中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 危包类别代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 危包类别中文名称 |
 
 * **返回参数示例**
 
@@ -2587,11 +2643,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=4A
+  * 示例：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=4A&page_current=1&page_size=20
   
 * **返回参数类型**
 
@@ -2604,11 +2661,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 危包规格代码     |
-    | name_cn  | string   | 危包规格中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 危包规格代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 危包规格中文名称 |
 
 * **返回参数示例**
 
@@ -2644,11 +2702,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2660,11 +2719,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 许可证类型代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 许可证类型中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 许可证类型代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 许可证类型中文名称 |
 
 * **返回参数示例**
 
@@ -2704,11 +2764,12 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key         |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字          |
-    | page     | int      | 否       | 页码(默认返回第1页) |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=123456789&app_id=11111&keyword=101&page=1
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2720,13 +2781,14 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | &nbsp;&nbsp;&nbsp;page     | int      | 页码                 |
-    | &nbsp;&nbsp;&nbsp;total    | int      | 返回数据总数         |
-    | &nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 运输方式代码     |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 运输方式中文名称 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
-    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 运输方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 运输方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dec_old_code  | string   | 原海关代码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_old_code  | string   | 原检疫代码 |
 
 * **返回参数示例**
 
@@ -2768,12 +2830,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=5
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=5&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2786,11 +2849,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result   | dict     | 返回结果         |
-    | page     | int      | 页码             |
-    | total    | int      | 返回数据总数     |
-    | data     | list     | 返回数据         |
-    | code     | string   | 征免方式代码     |
-    | name_cn  | string   | 征免方式中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据         |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 征免方式代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 征免方式中文名称 |
 
 * **返回参数示例**
 
@@ -2854,12 +2918,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=101
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2872,11 +2937,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码         |
     | errmsg   | string   | 错误信息         |
     | result       | dict     | 返回结果     |
-    | page         | int      | 页码         |
-    | total        | int      | 返回数据总数 |
-    | data         | list     | 返回数据     |
-    | code     | string   | 征免性质代码     |
-    | name_cn  | string   | 征免性质中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data         | list     | 返回数据     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 征免性质代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 征免性质中文名称 |
 
 * **返回参数示例**
 
@@ -2940,12 +3006,13 @@ result | dict | 返回结果
     | auth_key | string   | 是       | 用户验证key |
     | app_id | string   | 是       | 应用ID |
     | keyword  | string   | 否       | 请求关键字  |
-    | page     | int      | 否       | 页码        |
+    | page_current | int | 否 | 页码，默认为1 |
+    | page_size | int | 否 | 每页条数，默认20条，最大不超过30条 |
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=654026
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=中国
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=654026&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=中国&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2958,11 +3025,12 @@ result | dict | 返回结果
     | errcode  | string   | 错误代码             |
     | errmsg   | string   | 错误信息             |
     | result   | dict     | 返回结果             |
-    | page     | int      | 页码                 |
-    | total    | int      | 返回数据总数         |
-    | data     | list     | 返回数据             |
-    | code     | string   | 国内行政区划代码     |
-    | name_cn  | string   | 国内行政区划中文名称 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数 |
+    | &nbsp;&nbsp;&nbsp;&nbsp;data     | list     | 返回数据             |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;code     | string   | 国内行政区划代码     |
+    | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name_cn  | string   | 国内行政区划中文名称 |
 
 * **返回参数示例**
 
