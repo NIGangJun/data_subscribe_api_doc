@@ -36,13 +36,14 @@
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/cn_goods_tariff?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/cn_goods_tariff?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -56,8 +57,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;goods_name_cn | string | 商品中文名称
@@ -93,13 +95,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -113,8 +116,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_name | string | 税种名称
@@ -144,12 +148,13 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/ex_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/ex_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -163,8 +168,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_name | string | 税种名称
@@ -194,13 +200,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID |
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_preferential_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_preferential_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -214,8 +221,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;origin_country_code | string | 原产国代码
@@ -246,13 +254,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_conventional_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_conventional_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -266,8 +275,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;origin_country_code | string | 原产国代码
@@ -298,13 +308,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_anti_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_anti_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -318,8 +329,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;origin_country_code | string | 原产国代码
@@ -358,13 +370,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_waste_electronic_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_waste_electronic_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -378,8 +391,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tax_category_name | string | 税种名称
@@ -409,13 +423,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/goods_declare_element?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/goods_declare_element?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -429,8 +444,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;element_no | string | 序号
@@ -455,13 +471,14 @@ result | dict | 返回结果
 参数名称 | 参数类型 | 是否必填 | 备注
 ---|---|---|---
 auth_key | string | 是 | 用户验证key
-| app_id | string   | 是       | 应用ID |
+app_id | string | 是 | 应用ID
 hs_code| string | 是 | 商品编码
-page | int | 否 | 页码，默认为1
+page_current | int | 否 | 页码，默认为1
+page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/ciq_code?auth_key=1111111111&app_id=11111&hs_code=1111111111&page=1
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/ciq_code?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -475,8 +492,9 @@ page | int | 否 | 页码，默认为1
 errcode | string | 错误代码
 errmsg | string | 错误信息
 result | dict | 返回结果
-&nbsp;&nbsp;&nbsp;&nbsp;page | int | 页码
-&nbsp;&nbsp;&nbsp;&nbsp;total | int | 返回数据总数
+&nbsp;&nbsp;&nbsp;&nbsp;page_current | int | 当前页码
+&nbsp;&nbsp;&nbsp;&nbsp;page_size | int | 每页条数
+&nbsp;&nbsp;&nbsp;&nbsp;total_count | int | 返回数据总数
 &nbsp;&nbsp;&nbsp;&nbsp;data | list | 返回数据
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hs_code | string | 商品编码
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ciq_code | string | 序号
