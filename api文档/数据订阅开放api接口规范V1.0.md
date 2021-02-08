@@ -43,7 +43,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/cn_goods_tariff?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/cn_goods_tariff?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -102,7 +102,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_base_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -154,7 +154,7 @@ page_current | int | 否 | 页码，默认为1
 page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/ex_base_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/ex_base_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -207,7 +207,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_preferential_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_preferential_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -261,7 +261,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_conventional_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_conventional_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -315,7 +315,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_anti_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_anti_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -377,7 +377,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_waste_electronic_rate?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/im_waste_electronic_rate?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -430,7 +430,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/goods_declare_element?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/goods_declare_element?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -478,7 +478,7 @@ page_size | int | 否 | 每页条数，默认20条，最大不超过30条
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cn_inout_tariff/ciq_code?auth_key=1111111111&app_id=11111&hs_code=1111111111&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cn_inout_tariff/ciq_code?auth_key=您的auth_key&app_id=您的app_id&hs_code=1111111111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -538,7 +538,7 @@ result | dict | 返回结果
 
 
 * **请求示例**
-  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=1111&hs_code=11111&page_current=1&page_size=20
+  * http://open_api.aeotrade.com/services/classify_reference/cn_declare_element_eg?auth_key=1111&app_id=您的app_id&hs_code=11111&page_current=1&page_size=20
 
 
 * **返回参数类型**
@@ -582,7 +582,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_ruling?auth_key=1111111111&app_id=1111&related_no=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
+  * http://open_api.aeotrade.com/services/classify_reference/classify_ruling?auth_key=您的auth_key&app_id=您的app_id&related_no=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -634,7 +634,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_resolve?auth_key=1111111111&app_id=1111&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
+  * http://open_api.aeotrade.com/services/classify_reference/classify_resolve?auth_key=您的auth_key&app_id=您的app_id&classify_resolve_no=1111111111&hs_code=1111111111&goods_name_cn=1111111111&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -686,7 +686,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * http://open_api.aeotrade.com/services/classify_reference/classify_pre_ruling?auth_key=1111111111&app_id=1111&pre_ruling_no=11&hs_code=11&goods_name_cn=11&page_current=1&page_size=20
+  * http://open_api.aeotrade.com/services/classify_reference/classify_pre_ruling?auth_key=您的auth_key&app_id=您的app_id&pre_ruling_no=11&hs_code=11&goods_name_cn=11&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -741,7 +741,7 @@ result | dict | 返回结果
 
 
 * **请求示例**
-    * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=123456789&keyword=M&page_current=1&page_size=20
+    * http://open_api.aeotrade.com/services/cus_params/wrap_type?auth_key=您的auth_key&keyword=M&page_current=1&page_size=20
     
 * **返回参数类型**
     * JSON
@@ -788,8 +788,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=M&app_id=11111&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=123456789&keyword=报关&app_id=11111&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=您的auth_key&keyword=M&app_id=您的app_id&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_type?auth_key=您的auth_key&keyword=报关&app_id=您的app_id&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -876,8 +876,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=C&app_id=11111&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=123456789&keyword=自报自缴&app_id=11111&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=您的auth_key&keyword=C&app_id=您的app_id&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_entry_doc_type?auth_key=您的auth_key&keyword=自报自缴&app_id=您的app_id&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -969,8 +969,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=1&app_id=11111&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=123456789&keyword=后报关&app_id=11111&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=您的auth_key&keyword=1&app_id=您的app_id&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/filing_doc_type?auth_key=您的auth_key&keyword=后报关&app_id=您的app_id&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1052,7 +1052,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_terms?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1114,7 +1114,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/port_code?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1180,7 +1180,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/relation_reason_type?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1240,8 +1240,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=010&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=123456789&app_id=11111&keyword=海关总署&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=您的auth_key&app_id=您的app_id&keyword=010&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cus_dist_code?auth_key=您的auth_key&app_id=您的app_id&keyword=海关总署&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1328,8 +1328,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=ABW&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=123456789&app_id=11111&keyword=阿富汗&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=您的auth_key&app_id=您的app_id&keyword=ABW&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/foreign_region_code?auth_key=您的auth_key&app_id=您的app_id&keyword=阿富汗&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1418,8 +1418,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=640&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=123456789&app_id=11111&keyword=石嘴山&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=您的auth_key&app_id=您的app_id&keyword=640&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/inland_region_code?auth_key=您的auth_key&app_id=您的app_id&keyword=石嘴山&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1511,7 +1511,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/domestic_ports_code?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1572,8 +1572,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=AUD&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=123456789&app_id=11111&keyword=人民币&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=您的auth_key&app_id=您的app_id&keyword=AUD&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/currency_code?auth_key=您的auth_key&app_id=您的app_id&keyword=人民币&page_current=1&page_size=20
   
 * **返回参数类型**
 
@@ -1665,8 +1665,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=12&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=123456789&app_id=11111&keyword=转基因产品&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=您的auth_key&app_id=您的app_id&keyword=12&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_attr_type?auth_key=您的auth_key&app_id=您的app_id&keyword=转基因产品&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1748,8 +1748,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=12&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=123456789&app_id=11111&keyword=化妆品&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=您的auth_key&app_id=您的app_id&keyword=12&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/goods_purpose?auth_key=您的auth_key&app_id=您的app_id&keyword=化妆品&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1835,8 +1835,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=11&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=123456789&app_id=11111&keyword=标准&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=您的auth_key&app_id=您的app_id&keyword=11&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/container_spec?auth_key=您的auth_key&app_id=您的app_id&keyword=标准&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -1931,7 +1931,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/unit?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -1991,7 +1991,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/trade_mode?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2058,8 +2058,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=000000&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=123456789&app_id=11111&keyword=海关&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=您的auth_key&app_id=您的app_id&keyword=000000&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_org_code?auth_key=您的auth_key&app_id=您的app_id&keyword=海关&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2146,8 +2146,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=100&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=123456789&app_id=11111&keyword=进口肉类&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=您的auth_key&app_id=您的app_id&keyword=100&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ent_qua_type?auth_key=您的auth_key&app_id=您的app_id&keyword=进口肉类&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2234,8 +2234,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=18&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=123456789&app_id=11111&keyword=证书&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=您的auth_key&app_id=您的app_id&keyword=18&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/ciq_app_doc_code?auth_key=您的auth_key&app_id=您的app_id&keyword=证书&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2322,7 +2322,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/country_code?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2384,8 +2384,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=A&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=123456789&app_id=11111&keyword=出口许可证&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=您的auth_key&app_id=您的app_id&keyword=A&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/doc_att_type?auth_key=您的auth_key&app_id=您的app_id&keyword=出口许可证&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2472,8 +2472,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=010&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=123456789&app_id=11111&keyword=检疫证书&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=您的auth_key&app_id=您的app_id&keyword=010&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/bill_att_type?auth_key=您的auth_key&app_id=您的app_id&keyword=检疫证书&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2565,8 +2565,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=3&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=二类&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=您的auth_key&app_id=您的app_id&keyword=3&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=您的auth_key&app_id=您的app_id&keyword=二类&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2648,7 +2648,7 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=123456789&app_id=11111&keyword=4A&page_current=1&page_size=20
+  * 示例：http://open_api.aeotrade.com/services/cus_params/dang_pack_spec?auth_key=您的auth_key&app_id=您的app_id&keyword=4A&page_current=1&page_size=20
   
 * **返回参数类型**
 
@@ -2707,7 +2707,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/license_type?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2769,7 +2769,7 @@ result | dict | 返回结果
 
 * **请求示例**
   
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/transport_mode?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
 * **返回参数类型**
   
 - JSON
@@ -2835,8 +2835,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=5&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=您的auth_key&app_id=您的app_id&keyword=5&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=您的auth_key&app_id=您的app_id&keyword=征税&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -2923,8 +2923,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=101&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=123456789&app_id=11111&keyword=征税&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=您的auth_key&app_id=您的app_id&keyword=101&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/nat_levy_exem?auth_key=您的auth_key&app_id=您的app_id&keyword=征税&page_current=1&page_size=20
 
 * **返回参数类型**
 
@@ -3011,8 +3011,8 @@ result | dict | 返回结果
 
 * **请求示例**
 
-  * 示例1：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=654026&page_current=1&page_size=20
-  * 示例2：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=123456789&app_id=11111&keyword=中国&page_current=1&page_size=20
+  * 示例1：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=您的auth_key&app_id=您的app_id&keyword=654026&page_current=1&page_size=20
+  * 示例2：http://open_api.aeotrade.com/services/cus_params/cn_admin_area?auth_key=您的auth_key&app_id=您的app_id&keyword=中国&page_current=1&page_size=20
 
 * **返回参数类型**
 
